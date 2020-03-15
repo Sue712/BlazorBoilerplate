@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\jsexample.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\bootstrap\bootstrap.min.css.map" />
+    <None Include="wwwroot\css\open-iconic\FONT-LICENSE" />
+    <None Include="wwwroot\css\open-iconic\font\fonts\open-iconic.svg" />
+    <None Include="wwwroot\css\open-iconic\ICON-LICENSE" />
+    <None Include="wwwroot\css\open-iconic\README.md" />
+    <None Include="wwwroot\fonts\fa-brands-400.svg" />
+    <None Include="wwwroot\fonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\fonts\fa-light-300.svg" />
+    <None Include="wwwroot\fonts\fa-light-300.woff2" />
+    <None Include="wwwroot\fonts\fa-regular-400.svg" />
+    <None Include="wwwroot\fonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\fonts\fa-solid-900.svg" />
+    <None Include="wwwroot\fonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-Black.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-BlackItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-Bold.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-BoldItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-ExtraBold.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-ExtraBoldItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-Heavy.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-HeavyItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-Light.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-LightItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-Medium.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-MediumItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-Regular.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-RegularItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-SemiBold.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-SemiBoldItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-Thin.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-ThinItalic.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-UltraLight.woff2" />
+    <None Include="wwwroot\fonts\Gilroy-UltraLightItalic.woff2" />
+    <None Include="wwwroot\fonts\icon_navs.svg" />
+    <None Include="wwwroot\fonts\pignose.calendar.svg" />
+    <None Include="wwwroot\js\bootstrap.min.js" />
+    <None Include="wwwroot\js\countdown.js" />
+    <None Include="wwwroot\js\h4-menu-show.js" />
+    <None Include="wwwroot\js\html5shiv-printshiv.js" />
+    <None Include="wwwroot\js\html5shiv.js" />
+    <None Include="wwwroot\js\imagesloaded.pkgd.min.js" />
+    <None Include="wwwroot\js\isotope.pkgd.min.js" />
+    <None Include="wwwroot\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\js\jquery-ui.js" />
+    <None Include="wwwroot\js\jquery.counterup.min.js" />
+    <None Include="wwwroot\js\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\js\jquery.scrollUp.js" />
+    <None Include="wwwroot\js\jquery.waypoints.min.js" />
+    <None Include="wwwroot\js\owl.carousel.min.js" />
+    <None Include="wwwroot\js\pignose.calendar.min.js" />
+    <None Include="wwwroot\js\popper.min.js" />
+    <None Include="wwwroot\js\stellarnav.min.js" />
+    <None Include="wwwroot\js\theme.js" />
+    <None Include="wwwroot\js\wow.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+  </ItemGroup>
+
+</Project>

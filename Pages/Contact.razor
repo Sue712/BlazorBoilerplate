@@ -1,0 +1,90 @@
+﻿
+@page "/Contact"
+@inject IJSRuntime JSRuntime;
+@using JikyungHomePage_JKPDM.Data
+
+<style scoped>
+
+    input {
+        width: 1000px;
+        height: 50px;
+    }
+
+    .page-blog-area .blog-details .comment-area .comment-box .comment-input-box textarea {
+        width: 99%;
+        height: 100%;
+        padding-left: 0px;
+    }
+</style>
+
+<section class="home2-hero-area">
+    <div class="home2-hero-banner wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms"><img class="item-bounce" src="img/product-showcase/hero-banner.png" style="width:1920px; height:800px;"alt=""></div>
+    <div class="home2-hero-container">
+        <div class="row">
+            <div class="col-lg-12 col-md-7 col-12">
+                <div class="home2-hero-content">
+                    <h2 class="title">온라인 문의</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-blog-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="blog-details single-post-item format-standard" style="padding: 50px 0px 0px 0px;">
+                    <div class="comment-area">
+                        <div class="comment-box">
+                            <h3 class="reply-title">Contact Us</h3>
+                            <div class="comment-form">
+                                <EditForm Model="@_exampleModel" OnValidSubmit="@HandleValidSubmit">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="comment-input-box"><span class="icon"><i class="fal fa-user"></i></span><InputText placeholder="name" @bind-Value="@_exampleModel.Name" /></div>
+                                            <div class="comment-input-box"><span class="icon"><i class="fal fa-envelope"></i></span><InputText placeholder="email" @bind-Value="@_exampleModel.Email" /></div>
+                                            <div class="comment-input-box"><span class="icon"><i class="fal fa-pencil-alt"></i></span><InputTextArea placeholder="contents" @bind-Value="@_exampleModel.Contents" /></div>
+                                            <div class="comment-input-box">
+                                                <button type="submit">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </EditForm>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    private ExampleModel _exampleModel = new ExampleModel();
+    private char res;
+
+
+    private void HandleValidSubmit()
+    {
+        SendMail sendMail = new SendMail();
+        res = sendMail.GetMailDataAsync(_exampleModel);
+
+        
+
+        if (res == '1')
+        {
+            JSRuntime.InvokeVoidAsync("Alert", "메일이 전송되었습니다.");
+            _exampleModel = new ExampleModel();
+           
+            return;
+        }else if (res == '2') { 
+            JSRuntime.InvokeVoidAsync("Alert", "이메일 확인해주세요.");
+            return;
+        } else { 
+            JSRuntime.InvokeVoidAsync("Alert", "메일이 전송되지 않았습니다. 관리자에게 문의해주세요.");
+            return;
+        }
+       
+    }
+
+}
